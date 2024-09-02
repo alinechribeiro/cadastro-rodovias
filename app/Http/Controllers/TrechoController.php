@@ -63,28 +63,22 @@ class TrechoController extends Controller
         // Paginate the results
         $perPage = $request->get('per_page', 10);  // Default to 10 items per page
         $trechos = $query->paginate($perPage);
-Log::info('$trechos!!!!!!');
-        Log::info($trechos);
 
         return response()->json($trechos);
     }
 
     public function deleteTrecho($id)
     {
-        // Find the Trecho by ID
         $trecho = Trecho::find($id);
 
         if (!$trecho) {
-            // If the Trecho doesn't exist, return a 404 error
             return response()->json([
                 'message' => 'Trecho not found'
             ], 404);
         }
 
-        // Delete the Trecho
         $trecho->delete();
 
-        // Return a success response
         return response()->json([
             'message' => 'Trecho deleted successfully'
         ], 200);
@@ -101,9 +95,8 @@ Log::info('$trechos!!!!!!');
     public function update(Request $request)
     {
         $trecho = Trecho::findOrFail($request->id);
-        Log::info($trecho);
         $trecho->update($request->all());
-        Log::info('updated');
+        
         return response()->json(['success' => true]);
     }
 }
