@@ -18,8 +18,8 @@ Siga os passos abaixo para configurar o projeto localmente:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/alinechribeiro/cadastra-trechos.git
-   cd cadastra-trechos
+   git clone https://github.com/alinechribeiro/cadastro-rodovias.git
+   cd cadastro-rodovias
     ```
 ## Instale as dependências do PHP:
 
