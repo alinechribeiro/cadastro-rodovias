@@ -63,6 +63,11 @@ php artisan key:generate
     php artisan migrate
 ```
 
+## Execute os seeds para alimentar com dados de teste:
+```bash
+    php artisan db:seed
+```
+
 ## Como Rodar o Projeto
 ### Rodando o Servidor de Desenvolvimento
 
